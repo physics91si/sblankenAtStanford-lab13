@@ -1,0 +1,2 @@
+matrices.o: matrices.c
+matrices_fast.o: matrices_fast.c
