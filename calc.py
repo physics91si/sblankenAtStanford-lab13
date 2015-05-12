@@ -1,19 +1,17 @@
-#! /usr/bin/python2.7
+#!/usr/bin/python
 
-"""
-Your Name
-Lab 11
-Physics 91SI, Spring 2013
-"""
+# Lab 13
+# Physics 91SI
+# Spring 2015
 
 import sys
 
 def main():
     """Join command-line arguments and pass them to unitcalc(), then print."""
     calculation = ''.join(sys.argv[1:])
-    print unitcalc(calculation)
+    print calc(calculation)
 
-def unitcalc(s):
+def calc(s):
     """Parse a string describing an operation on quantities with units."""
 
     # TODO make this robust for differently formatted inputs
@@ -27,7 +25,7 @@ def unitcalc(s):
         pass
     elif operation=='*':
         pass
-    elif operation=='*':
+    elif operation=='/':
         pass
 
 
