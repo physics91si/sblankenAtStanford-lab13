@@ -10,16 +10,16 @@ import calc
 class CalcTest(unittest.TestCase):
     # TODO implement tests here to verify that your functions work!
     def testAddition(self):
-        self.assertEqual(calc.calc('1+1'), 2)
+        self.assertEqual(calc.calc('10+1'), 11)
 
     def testSubtraction(self):
-        pass
+        self.assertEqual(calc.calc('10-8'), 2)
 
     def testMultiplciation(self):
-        pass
+        self.assertEqual(calc.calc('3*1'), 3)
  
     def testDivision(self):
-        pass
+        self.assertEqual(calc.calc('8/2'), 4)
 
 if __name__ == '__main__':
     unittest.main()

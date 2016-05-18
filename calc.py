@@ -9,24 +9,27 @@ import sys
 def main():
     """Join command-line arguments and pass them to unitcalc(), then print."""
     calculation = ''.join(sys.argv[1:])
-    print calc(calculation)
-
+    print (calc(calculation))
 def calc(s):
-    """Parse a string describing an operation on quantities with units."""
-
-    # TODO make this robust for differently formatted inputs
-    num1 = s[0]
-    num2 = s[2]
-    operation = s[1]
-
+    index = 0;
+    for c in s:
+        if not c.isdigit():
+            break;
+        index = index + 1
+    operation = s[index]
+    num1 = (s[0: index])
+    num2 = (s[index: len(s)])
+    print(num1)
+    print(num2)
+    
     if operation=='+':
         return int(num1)+int(num2)
     elif operation=='-':
-        pass
+        return int(num1)-int(num2)
     elif operation=='*':
-        pass
+        return int(num1)*int(num2)
     elif operation=='/':
-        pass
+        return int(num1)/int(num2)
 
 
 if __name__ == "__main__": main()
